@@ -12,6 +12,7 @@ char incomingPacket[33];
 
 void setup() {
     WiFi.setAutoReconnect(true);
+    WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, password);
 
     while (WiFi.status() != WL_CONNECTED) {
